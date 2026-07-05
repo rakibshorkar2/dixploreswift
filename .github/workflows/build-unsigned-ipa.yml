@@ -16,7 +16,7 @@ env:
 jobs:
   build:
     name: Build unsigned IPA
-    runs-on: macos-15
+    runs-on: macos-14
 
     steps:
       - name: Checkout repository
@@ -28,6 +28,7 @@ jobs:
           sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer 2>/dev/null || \
           sudo xcode-select -s /Applications/Xcode.app/Contents/Developer 2>/dev/null || true
           xcodebuild -version
+          xcrun simctl list runtimes 2>/dev/null || true
 
       - name: Resolve Swift Package dependencies
         run: |
