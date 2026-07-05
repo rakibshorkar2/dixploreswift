@@ -21,11 +21,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Select Xcode 16
+      - name: Select Xcode 16 and install iOS 18 simulator runtime
         run: |
           ls /Applications | grep -i xcode
           sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
           xcodebuild -version
+          # Initialize CoreSimulator and download iOS 18 simulator runtime
+          sudo xcodebuild -runFirstLaunch 2>&1 || true
+          xcrun simctl list 2>&1 || true
+          xcodebuild -downloadPlatform iOS -allowProvisioningUpdates 2>&1
+          xcrun simctl runtime list 2>&1 | head -10
 
       - name: Resolve Swift Package dependencies
         run: |
