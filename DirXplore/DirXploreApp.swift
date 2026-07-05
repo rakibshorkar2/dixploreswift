@@ -11,6 +11,8 @@ struct DirXploreApp: App {
     @State private var hapticsManager = HapticsManager()
     @State private var downloadService = DownloadService()
     @State private var torrentService = TorrentService()
+    @State private var backgroundService = BackgroundService()
+    @State private var liveActivityService = LiveActivityService()
 
     init() {
         let schema = Schema([
@@ -35,6 +37,8 @@ struct DirXploreApp: App {
                 .environment(hapticsManager)
                 .environment(downloadService)
                 .environment(torrentService)
+                .environment(backgroundService)
+                .environment(liveActivityService)
                 .modelContainer(container)
                 .onAppear {
                     Task { await checkInitialAuth() }
@@ -68,7 +72,9 @@ struct DirXploreApp: App {
                         logger.warning("Biometric authentication failed on return")
                     }
                 }
-            case .background, .inactive:
+            case .background:
+                backgroundService.startBackgroundTask()
+            case .inactive:
                 break
             @unknown default:
                 break

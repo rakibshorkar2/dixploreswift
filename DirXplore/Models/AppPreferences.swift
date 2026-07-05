@@ -12,6 +12,12 @@ final class AppPreferences {
     var requireAuthOnLaunch: Bool
     var autoLockMinutes: Int
     var privacyBlurEnabled: Bool
+    var proxyEnabled: Bool
+    var proxyType: String
+    var proxyServer: String
+    var proxyPort: Int
+    var proxyUsername: String
+    var proxyPassword: String
 
     init(
         accentColorHex: String = "007AFF",
@@ -21,7 +27,13 @@ final class AppPreferences {
         maxDownloadSpeed: Int64 = 0,
         requireAuthOnLaunch: Bool = true,
         autoLockMinutes: Int = 5,
-        privacyBlurEnabled: Bool = true
+        privacyBlurEnabled: Bool = true,
+        proxyEnabled: Bool = false,
+        proxyType: String = "socks5",
+        proxyServer: String = "103.166.253.92",
+        proxyPort: Int = 1088,
+        proxyUsername: String = "test",
+        proxyPassword: String = "test"
     ) {
         self.id = UUID()
         self.accentColorHex = accentColorHex
@@ -32,6 +44,12 @@ final class AppPreferences {
         self.requireAuthOnLaunch = requireAuthOnLaunch
         self.autoLockMinutes = autoLockMinutes
         self.privacyBlurEnabled = privacyBlurEnabled
+        self.proxyEnabled = proxyEnabled
+        self.proxyType = proxyType
+        self.proxyServer = proxyServer
+        self.proxyPort = proxyPort
+        self.proxyUsername = proxyUsername
+        self.proxyPassword = proxyPassword
     }
 
     static func defaults() -> AppPreferences {

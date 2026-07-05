@@ -2,7 +2,7 @@ import SwiftUI
 
 @Observable
 final class BrowserViewModel {
-    var addressText = ""
+    var addressText = "http://172.16.50.4/"
     var currentURL: URL?
     var breadcrumbs: [URL] = []
     var items: [FileItem] = []
@@ -33,6 +33,7 @@ struct BrowserView: View {
     @Environment(BrowserViewModel.self) private var viewModel
     @Environment(HapticsManager.self) private var haptics
     @State private var showSearch = false
+    @State private var hasLoadedDefault = false
 
     var body: some View {
         @Bindable var vm = viewModel
@@ -54,6 +55,12 @@ struct BrowserView: View {
         )
         .sheet(isPresented: $showSearch) {
             SearchOverlayView()
+        }
+        .onAppear {
+            if !hasLoadedDefault && viewModel.addressText == "http://172.16.50.4/" {
+                hasLoadedDefault = true
+                Task { await navigateToAddress() }
+            }
         }
     }
 
