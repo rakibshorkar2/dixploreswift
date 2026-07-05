@@ -22,33 +22,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Select Xcode with iOS 18 SDK
+      - name: Select Xcode 16
         run: |
           ls /Applications | grep -i xcode
-          for xc in /Applications/Xcode_*.app /Applications/Xcode.app; do
-            if [ -d "$xc" ]; then
-              sudo xcode-select -s "$xc/Contents/Developer"
-              if xcodebuild -version -sdk 2>/dev/null | grep -q "iphoneos18"; then
-                echo "Using: $xc"
-                xcodebuild -version
-                break
-              fi
-            fi
-          done
-          xcodebuild -version -sdk 2>/dev/null | head -5
-          if ! xcodebuild -version -sdk 2>/dev/null | grep -q "iphoneos18"; then
-            echo "iOS 18 SDK not found, downloading..."
-            sudo xcodebuild -license accept 2>/dev/null || true
-            xcodebuild -downloadPlatform iOS -allowProvisioningUpdates 2>&1 | tail -5
-          fi
+          sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+          xcodebuild -version
+
+      - name: Download iOS 18 platform
+        run: |
+          sudo xcodebuild -license accept 2>/dev/null || true
+          xcodebuild -downloadPlatform iOS -allowProvisioningUpdates 2>&1
 
       - name: Resolve Swift Package dependencies
         run: |
           xcodebuild -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.SCHEME }}" \
-            -configuration "${{ env.CONFIGURATION }}" \
             -sdk "${{ env.SDK }}" \
-            -destination "${{ env.DESTINATION }}" \
             -derivedDataPath "${{ env.DERIVED_DATA }}" \
             -resolvePackageDependencies \
             CODE_SIGNING_ALLOWED=NO
