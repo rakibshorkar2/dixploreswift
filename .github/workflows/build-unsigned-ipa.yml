@@ -11,7 +11,6 @@ env:
   CONFIGURATION: Release
   SDK: iphoneos
   DERIVED_DATA: DerivedData
-  DESTINATION: generic/platform=iOS
 
 jobs:
   build:
@@ -28,11 +27,6 @@ jobs:
           sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
           xcodebuild -version
 
-      - name: Download iOS 18 platform
-        run: |
-          sudo xcodebuild -license accept 2>/dev/null || true
-          xcodebuild -downloadPlatform iOS -allowProvisioningUpdates 2>&1
-
       - name: Resolve Swift Package dependencies
         run: |
           xcodebuild -project "${{ env.PROJECT_PATH }}" \
@@ -47,10 +41,11 @@ jobs:
           set -eo pipefail
           xcodebuild -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.SCHEME }}" \
-            -destination "${{ env.DESTINATION }}" \
             -configuration "${{ env.CONFIGURATION }}" \
             -sdk "${{ env.SDK }}" \
             -derivedDataPath "${{ env.DERIVED_DATA }}" \
+            ARCHS=arm64 \
+            ONLY_ACTIVE_ARCH=NO \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
