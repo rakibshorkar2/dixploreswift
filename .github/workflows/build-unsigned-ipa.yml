@@ -21,15 +21,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show repo structure
-        run: find . -name "*.xcodeproj" -maxdepth 3
-
-      - name: Select Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
-        continue-on-error: true
-
-      - name: Show Xcode version
-        run: xcodebuild -version
+      - name: Select Xcode
+        run: |
+          ls /Applications | grep -i xcode || true
+          sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer 2>/dev/null || \
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer 2>/dev/null || true
+          xcodebuild -version
 
       - name: Resolve Swift Package dependencies
         run: |
@@ -41,8 +38,9 @@ jobs:
             -resolvePackageDependencies \
             CODE_SIGNING_ALLOWED=NO
 
-      - name: Build the .app bundle (unsigned)
+      - name: Build the .app bundle
         run: |
+          set -eo pipefail
           xcodebuild -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.SCHEME }}" \
             -configuration "${{ env.CONFIGURATION }}" \
@@ -52,13 +50,24 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             OTHER_CODE_SIGN_FLAGS="--no-strict" \
-            | tee xcodebuild.log
+            BUILD_LIBRARY_FOR_DISTRIBUTION=NO \
+            2>&1 | tee xcodebuild.log
+
+      - name: Verify .app bundle
+        run: |
+          APP_DIR="${{ env.DERIVED_DATA }}/Build/Products/${{ env.CONFIGURATION }}-${{ env.SDK }}"
+          APP_PATH="$APP_DIR/${{ env.SCHEME }}.app"
+          echo "Checking: $APP_PATH"
+          ls -la "$APP_PATH" || { echo "ERROR: .app not found at $APP_PATH"; ls -la "$APP_DIR/" 2>/dev/null || true; exit 1; }
+          ls -la "$APP_PATH/Info.plist" 2>/dev/null && echo "Info.plist found" || { echo "ERROR: Info.plist missing in bundle"; ls -la "$APP_PATH/" 2>/dev/null; exit 1; }
+          echo "Bundle verified successfully"
 
       - name: Package unsigned .app into .ipa
         run: |
-          APP_PATH="${{ env.DERIVED_DATA }}/Build/Products/${{ env.CONFIGURATION }}-${{ env.SDK }}"
+          APP_DIR="${{ env.DERIVED_DATA }}/Build/Products/${{ env.CONFIGURATION }}-${{ env.SDK }}"
+          APP_PATH="$APP_DIR/${{ env.SCHEME }}.app"
           mkdir -p Payload
-          cp -R "$APP_PATH/${{ env.SCHEME }}.app" Payload/
+          cp -R "$APP_PATH" Payload/
           zip -r DirXplore.unsigned.ipa Payload/
           rm -rf Payload
           echo "IPA_SIZE=$(stat -f%z DirXplore.unsigned.ipa)" >> $GITHUB_ENV

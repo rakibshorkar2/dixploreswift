@@ -12,6 +12,11 @@ final class BackgroundService: NSObject {
     private var audioPlayer: AVAudioPlayer?
     private let locationManager = CLLocationManager()
 
+    override init() {
+        super.init()
+        locationManager.delegate = self
+    }
+
     func requestPermissions() {
         locationManager.requestAlwaysAuthorization()
 
@@ -127,5 +132,24 @@ final class BackgroundService: NSObject {
         }
 
         return data
+    }
+}
+
+extension BackgroundService: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        logger.debug("Background location update received")
+    }
+
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            logger.info("Location authorization granted")
+        case .denied, .restricted:
+            logger.warning("Location authorization denied")
+        case .notDetermined:
+            break
+        @unknown default:
+            break
+        }
     }
 }

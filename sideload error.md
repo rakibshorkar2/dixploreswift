@@ -1,0 +1,2 @@
+Sideloadly will be shown in your Apple ID as PC running Windows 10.0(0,0) with serial number RAKIB_PC
+Install failed: Guru Meditation b4822c@1441:4994f6 "There is no item named 'Payload/DirXplore.app/Info.plist' in the archive"
