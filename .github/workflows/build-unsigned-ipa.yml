@@ -11,6 +11,7 @@ env:
   CONFIGURATION: Release
   SDK: iphoneos
   DERIVED_DATA: DerivedData
+  DESTINATION: generic/platform=iOS
 
 jobs:
   build:
@@ -34,6 +35,7 @@ jobs:
             -scheme "${{ env.SCHEME }}" \
             -configuration "${{ env.CONFIGURATION }}" \
             -sdk "${{ env.SDK }}" \
+            -destination "${{ env.DESTINATION }}" \
             -derivedDataPath "${{ env.DERIVED_DATA }}" \
             -resolvePackageDependencies \
             CODE_SIGNING_ALLOWED=NO
@@ -43,6 +45,7 @@ jobs:
           set -eo pipefail
           xcodebuild -project "${{ env.PROJECT_PATH }}" \
             -scheme "${{ env.SCHEME }}" \
+            -destination "${{ env.DESTINATION }}" \
             -configuration "${{ env.CONFIGURATION }}" \
             -sdk "${{ env.SDK }}" \
             -derivedDataPath "${{ env.DERIVED_DATA }}" \
