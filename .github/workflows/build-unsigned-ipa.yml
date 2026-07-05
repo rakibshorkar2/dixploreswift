@@ -1,0 +1,75 @@
+name: Build Unsigned IPA
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  PROJECT_PATH: DirXplore.xcodeproj
+  SCHEME: DirXplore
+  CONFIGURATION: Release
+  SDK: iphoneos
+  DERIVED_DATA: DerivedData
+
+jobs:
+  build:
+    name: Build unsigned IPA
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+        continue-on-error: true
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Resolve Swift Package dependencies
+        run: |
+          xcodebuild -project "${{ env.PROJECT_PATH }}" \
+            -scheme "${{ env.SCHEME }}" \
+            -configuration "${{ env.CONFIGURATION }}" \
+            -sdk "${{ env.SDK }}" \
+            -derivedDataPath "${{ env.DERIVED_DATA }}" \
+            -resolvePackageDependencies \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build the .app bundle (unsigned)
+        run: |
+          xcodebuild -project "${{ env.PROJECT_PATH }}" \
+            -scheme "${{ env.SCHEME }}" \
+            -configuration "${{ env.CONFIGURATION }}" \
+            -sdk "${{ env.SDK }}" \
+            -derivedDataPath "${{ env.DERIVED_DATA }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            OTHER_CODE_SIGN_FLAGS="--no-strict" \
+            | tee xcodebuild.log
+
+      - name: Package unsigned .app into .ipa
+        run: |
+          APP_PATH="${{ env.DERIVED_DATA }}/Build/Products/${{ env.CONFIGURATION }}-${{ env.SDK }}"
+          mkdir -p Payload
+          cp -R "$APP_PATH/${{ env.SCHEME }}.app" Payload/
+          zip -r DirXplore.unsigned.ipa Payload/
+          rm -rf Payload
+          echo "IPA_SIZE=$(stat -f%z DirXplore.unsigned.ipa)" >> $GITHUB_ENV
+
+      - name: Upload unsigned IPA as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DirXplore-unsigned-ipa
+          path: DirXplore.unsigned.ipa
+          if-no-files-found: error
+
+      - name: Upload build log
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: xcodebuild.log
+          if-no-files-found: ignore

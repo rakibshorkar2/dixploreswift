@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB00000100000001A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000001A1B2C3D4; };
+		FB00000100000002A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000002A1B2C3D4; };
+		FB00000100000003A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000003A1B2C3D4; };
+		FB00000100000004A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000004A1B2C3D4; };
+		FB00000100000005A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000005A1B2C3D4; };
+		FB00000100000006A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000006A1B2C3D4; };
+		FB00000100000007A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000007A1B2C3D4; };
+		FB00000100000008A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000008A1B2C3D4; };
+		FB00000100000009A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000009A1B2C3D4; };
+		FB0000010000000AA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000000AA1B2C3D4; };
+		FB0000010000000BA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000000BA1B2C3D4; };
+		FB0000010000000CA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000000CA1B2C3D4; };
+		FB0000010000000DA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000000DA1B2C3D4; };
+		FB0000010000000EA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000000EA1B2C3D4; };
+		FB0000010000000FA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000000FA1B2C3D4; };
+		FB00000100000010A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000010A1B2C3D4; };
+		FB00000100000011A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000011A1B2C3D4; };
+		FB00000100000012A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000012A1B2C3D4; };
+		FB00000100000013A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000013A1B2C3D4; };
+		FB00000100000014A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000014A1B2C3D4; };
+		FB00000100000015A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000015A1B2C3D4; };
+		FB00000100000016A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000016A1B2C3D4; };
+		FB00000100000017A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000017A1B2C3D4; };
+		FB00000100000018A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000018A1B2C3D4; };
+		FB00000100000019A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000019A1B2C3D4; };
+		FB0000010000001AA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000001AA1B2C3D4; };
+		FB0000010000001BA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000001BA1B2C3D4; };
+		FB0000010000001CA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000001CA1B2C3D4; };
+		FB0000010000001DA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000001DA1B2C3D4; };
+		FB0000010000001EA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000001EA1B2C3D4; };
+		FB0000010000001FA1B2C3D4 = {isa = PBXBuildFile; fileRef = FR0000010000001FA1B2C3D4; };
+		FB00000100000020A1B2C3D4 = {isa = PBXBuildFile; fileRef = FR00000100000022A1B2C3D4; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FR00000100000001A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirXploreApp.swift; sourceTree = "<group>"; };
+		FR00000100000002A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItem.swift; sourceTree = "<group>"; };
+		FR00000100000003A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadItem.swift; sourceTree = "<group>"; };
+		FR00000100000004A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentItem.swift; sourceTree = "<group>"; };
+		FR00000100000005A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		FR00000100000006A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
+		FR00000100000007A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		FR00000100000008A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewModel.swift; sourceTree = "<group>"; };
+		FR00000100000009A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerViewModel.swift; sourceTree = "<group>"; };
+		FR0000010000000AA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerViewModel.swift; sourceTree = "<group>"; };
+		FR0000010000000BA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentViewModel.swift; sourceTree = "<group>"; };
+		FR0000010000000CA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewModel.swift; sourceTree = "<group>"; };
+		FR0000010000000DA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FR0000010000000EA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
+		FR0000010000000FA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryListView.swift; sourceTree = "<group>"; };
+		FR00000100000010A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerView.swift; sourceTree = "<group>"; };
+		FR00000100000011A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
+		FR00000100000012A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDetailView.swift; sourceTree = "<group>"; };
+		FR00000100000013A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentHubView.swift; sourceTree = "<group>"; };
+		FR00000100000014A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentSearchView.swift; sourceTree = "<group>"; };
+		FR00000100000015A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentDetailView.swift; sourceTree = "<group>"; };
+		FR00000100000016A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMediaPlayerView.swift; sourceTree = "<group>"; };
+		FR00000100000017A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		FR00000100000018A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FR00000100000019A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		FR0000010000001AA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityLockView.swift; sourceTree = "<group>"; };
+		FR0000010000001BA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerService.swift; sourceTree = "<group>"; };
+		FR0000010000001CA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		FR0000010000001DA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentService.swift; sourceTree = "<group>"; };
+		FR0000010000001EA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		FR0000010000001FA1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
+		FR00000100000020A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FR00000100000021A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DirXplore.entitlements; sourceTree = "<group>"; };
+		FR00000100000022A1B2C3D4 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FR00000100000023A1B2C3D4 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirXplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		GR00000100000001A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				GR00000100000002A1B2C3D4,
+				GR0000010000000FA1B2C3D4,
+			);
+			sourceTree = "<group>";
+		};
+		GR00000100000002A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000001A1B2C3D4,
+				GR00000100000003A1B2C3D4,
+				GR00000100000004A1B2C3D4,
+				GR00000100000005A1B2C3D4,
+				GR0000010000000DA1B2C3D4,
+				GR0000010000000EA1B2C3D4,
+			);
+			path = DirXplore;
+			sourceTree = "<group>";
+		};
+		GR00000100000003A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000002A1B2C3D4,
+				FR00000100000003A1B2C3D4,
+				FR00000100000004A1B2C3D4,
+				FR00000100000005A1B2C3D4,
+				FR00000100000006A1B2C3D4,
+				FR00000100000007A1B2C3D4,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GR00000100000004A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000008A1B2C3D4,
+				FR00000100000009A1B2C3D4,
+				FR0000010000000AA1B2C3D4,
+				FR0000010000000BA1B2C3D4,
+				FR0000010000000CA1B2C3D4,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		GR00000100000005A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR0000010000000DA1B2C3D4,
+				GR00000100000006A1B2C3D4,
+				GR00000100000007A1B2C3D4,
+				GR00000100000008A1B2C3D4,
+				GR00000100000009A1B2C3D4,
+				GR0000010000000AA1B2C3D4,
+				GR0000010000000BA1B2C3D4,
+				GR0000010000000CA1B2C3D4,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GR00000100000006A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR0000010000000EA1B2C3D4,
+				FR0000010000000FA1B2C3D4,
+				FR00000100000010A1B2C3D4,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		GR00000100000007A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000011A1B2C3D4,
+				FR00000100000012A1B2C3D4,
+			);
+			path = Downloads;
+			sourceTree = "<group>";
+		};
+		GR00000100000008A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000013A1B2C3D4,
+				FR00000100000014A1B2C3D4,
+				FR00000100000015A1B2C3D4,
+			);
+			path = Torrent;
+			sourceTree = "<group>";
+		};
+		GR00000100000009A1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000016A1B2C3D4,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		GR0000010000000AA1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000017A1B2C3D4,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		GR0000010000000BA1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000018A1B2C3D4,
+				FR00000100000019A1B2C3D4,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		GR0000010000000CA1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR0000010000001AA1B2C3D4,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		GR0000010000000DA1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR0000010000001BA1B2C3D4,
+				FR0000010000001CA1B2C3D4,
+				FR0000010000001DA1B2C3D4,
+				FR0000010000001EA1B2C3D4,
+				FR0000010000001FA1B2C3D4,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		GR0000010000000EA1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000020A1B2C3D4,
+				FR00000100000021A1B2C3D4,
+				FR00000100000022A1B2C3D4,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		GR0000010000000FA1B2C3D4 = {
+			isa = PBXGroup;
+			children = (
+				FR00000100000023A1B2C3D4,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TG00000100000001A1B2C3D4 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL00000100000002A1B2C3D4;
+			buildPhases = (
+				PH00000100000001A1B2C3D4,
+				PH00000100000002A1B2C3D4,
+				PH00000100000003A1B2C3D4,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DirXplore;
+			packageProductDependencies = (
+				PD00000100000001A1B2C3D4,
+			);
+			productName = DirXplore;
+			productReference = FR00000100000023A1B2C3D4;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PJ00000100000001A1B2C3D4 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					TG00000100000001A1B2C3D4 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = CL00000100000001A1B2C3D4;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = GR00000100000001A1B2C3D4;
+			packageReferences = (
+				PK00000100000001A1B2C3D4,
+			);
+			productRefGroup = GR0000010000000FA1B2C3D4;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				TG00000100000001A1B2C3D4,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		PH00000100000002A1B2C3D4 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB00000100000020A1B2C3D4,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PH00000100000001A1B2C3D4 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB00000100000001A1B2C3D4,
+				FB00000100000002A1B2C3D4,
+				FB00000100000003A1B2C3D4,
+				FB00000100000004A1B2C3D4,
+				FB00000100000005A1B2C3D4,
+				FB00000100000006A1B2C3D4,
+				FB00000100000007A1B2C3D4,
+				FB00000100000008A1B2C3D4,
+				FB00000100000009A1B2C3D4,
+				FB0000010000000AA1B2C3D4,
+				FB0000010000000BA1B2C3D4,
+				FB0000010000000CA1B2C3D4,
+				FB0000010000000DA1B2C3D4,
+				FB0000010000000EA1B2C3D4,
+				FB0000010000000FA1B2C3D4,
+				FB00000100000010A1B2C3D4,
+				FB00000100000011A1B2C3D4,
+				FB00000100000012A1B2C3D4,
+				FB00000100000013A1B2C3D4,
+				FB00000100000014A1B2C3D4,
+				FB00000100000015A1B2C3D4,
+				FB00000100000016A1B2C3D4,
+				FB00000100000017A1B2C3D4,
+				FB00000100000018A1B2C3D4,
+				FB00000100000019A1B2C3D4,
+				FB0000010000001AA1B2C3D4,
+				FB0000010000001BA1B2C3D4,
+				FB0000010000001CA1B2C3D4,
+				FB0000010000001DA1B2C3D4,
+				FB0000010000001EA1B2C3D4,
+				FB0000010000001FA1B2C3D4,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		PH00000100000003A1B2C3D4 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CF00000100000001A1B2C3D4 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF00000100000002A1B2C3D4 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF00000100000003A1B2C3D4 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "DirXplore/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.dirBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF00000100000004A1B2C3D4 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "DirXplore/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.dirBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL00000100000001A1B2C3D4 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF00000100000001A1B2C3D4,
+				CF00000100000002A1B2C3D4,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL00000100000002A1B2C3D4 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF00000100000003A1B2C3D4,
+				CF00000100000004A1B2C3D4,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		PK00000100000001A1B2C3D4 = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		PD00000100000001A1B2C3D4 = {
+			isa = XCSwiftPackageProductDependency;
+			package = PK00000100000001A1B2C3D4;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+	};
+	rootObject = PJ00000100000001A1B2C3D4;
+}
